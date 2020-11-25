@@ -1,7 +1,13 @@
 #모델을 정의하고 미분하는데 autograd를 사용.
 # nn.Module은 계층(layer)과 output을 반환하는 forward(input) 메서드포함
+
 # 신경망의 일반적인 학습과정
-# 1. 학습가능한 매개변수(가중치)를 갖는 신경망을 정의
+#학습 가능한 매개변수(또는 가중치(weight))를 갖는 신경망을 정의합니다.
+#데이터셋(dataset) 입력을 반복합니다.
+#입력을 신경망에서 전파(process)합니다.
+#손실(loss; 출력이 정답으로부터 얼마나 떨어져있는지)을 계산합니다.
+#변화도(gradient)를 신경망의 매개변수들에 역으로 전파합니다.
+#신경망의 가중치를 갱신합니다. 일반적으로 다음과 같은 간단한 규칙을 사용합니다: 새로운 가중치(weight) = 가중치(weight) - 학습률(learning rate) * 변화도(gradient)
 
 # CNN(Convolutional Neural Network)
 # image 전체를 보는 것이 아니라 부분을 보는 것이 핵심. 이 ‘부분’에 해당하는 것을 filter
